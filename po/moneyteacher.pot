@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the MoneyTeacher package.
+# This file is distributed under the same license as the moneyteacher package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #: moneyteacher/main.py:128 moneyteacher/main.py:132 moneyteacher/main.py:136
@@ -8,19 +8,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MoneyTeacher 1.0\n"
+"Project-Id-Version: moneyteacher 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 11:51+0100\n"
+"POT-Creation-Date: 2026-03-16 12:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: moneyteacher/main.py:79
-msgid "Byt till: Växelövning"
+msgid "Switch to: Switching exercise"
 msgstr ""
 
 #: moneyteacher/main.py:83
@@ -28,11 +28,11 @@ msgid "Guide"
 msgstr ""
 
 #: moneyteacher/main.py:108
-msgid "Nivå:"
+msgid "Level:"
 msgstr ""
 
 #: moneyteacher/main.py:124
-msgid "Tryck 'Ny uppgift' för att börja!"
+msgid "Press 'New task' to start!"
 msgstr ""
 
 #: moneyteacher/main.py:143
@@ -48,7 +48,7 @@ msgid "New uppgift"
 msgstr ""
 
 #: moneyteacher/main.py:180
-msgid "Nollställ"
+msgid "Reset to zero"
 msgstr ""
 
 #: moneyteacher/main.py:185
@@ -56,7 +56,7 @@ msgid "Complete!"
 msgstr ""
 
 #: moneyteacher/main.py:196
-msgid "Växel tillbaka:"
+msgid "Switch back:"
 msgstr ""
 
 #: moneyteacher/main.py:203

@@ -76,7 +76,7 @@ class MoneyTeacherApp(Adw.Application):
 
         # Header bar
         header = Adw.HeaderBar()
-        self.läge_knapp = Gtk.Button(label=_("Byt till: Växelövning")
+        self.läge_knapp = Gtk.Button(label=_("Switch to: Switching exercise")
         self.läge_knapp.connect("clicked", self.byt_läge)
         header.pack_end(self.läge_knapp)
 
@@ -105,7 +105,7 @@ class MoneyTeacherApp(Adw.Application):
         # Nivå-rad
         nivå_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
         nivå_box.set_halign(Gtk.Align.CENTER)
-        nivå_label = Gtk.Label(label=_("Nivå:")
+        nivå_label = Gtk.Label(label=_("Level:")
         nivå_box.append(nivå_label)
         self.nivå_spin = Gtk.SpinButton.new_with_range(1, 10, 1)
         self.nivå_spin.set_value(self.stats["nivå"])
@@ -121,7 +121,7 @@ class MoneyTeacherApp(Adw.Application):
         pris_box.set_margin_start(16)
         pris_box.set_margin_end(16)
 
-        self.uppgift_label = Gtk.Label(label=_("Tryck \'Ny uppgift\' för att börja!")
+        self.uppgift_label = Gtk.Label(label=_("Press \'New task\' to start!")
         self.uppgift_label.add_css_class("title-3")
         pris_box.append(self.uppgift_label)
 
@@ -177,7 +177,7 @@ class MoneyTeacherApp(Adw.Application):
         self.ny_knapp.connect("clicked", self.ny_uppgift)
         action_box.append(self.ny_knapp)
 
-        self.nollställ_knapp = Gtk.Button(label=_("Nollställ")
+        self.nollställ_knapp = Gtk.Button(label=_("Reset to zero")
         self.nollställ_knapp.add_css_class("pill")
         self.nollställ_knapp.connect("clicked", self.nollställ)
         action_box.append(self.nollställ_knapp)
@@ -193,7 +193,7 @@ class MoneyTeacherApp(Adw.Application):
         self.växel_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
         self.växel_box.set_halign(Gtk.Align.CENTER)
         self.växel_box.set_margin_top(8)
-        växel_label2 = Gtk.Label(label=_("Växel tillbaka:")
+        växel_label2 = Gtk.Label(label=_("Switch back:")
         self.växel_box.append(växel_label2)
         self.växel_entry = Gtk.Entry()
         self.växel_entry.set_input_purpose(Gtk.InputPurpose.NUMBER)
