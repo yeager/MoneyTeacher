@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=MoneyTeacher
+Name[sv]=Pengalärare
+Comment=Interactive cash register practice
+Comment[sv]=Interaktiv kassaövning
+GenericName=Accessibility Application
+GenericName[sv]=Tillgänglighetsapp
+Exec=python3 -m moneyteacher
+Icon=moneyteacher
+Terminal=false
+Type=Application
+Categories=Education;Accessibility;
+Keywords=accessibility;a11y;
+Keywords[sv]=tillgänglighet;funktionsnedsättning;
