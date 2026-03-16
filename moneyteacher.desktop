@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MoneyTeacher
+Comment=Interaktiv kassaövning för svenska valörer
+Exec=moneyteacher
+Icon=accessories-calculator
+Terminal=false
+Type=Application
+Categories=Education;Math;
+Keywords=pengar;matematik;kassa;mynt;sedlar;
