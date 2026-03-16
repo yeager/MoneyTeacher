@@ -5,6 +5,7 @@ import gi
 import json
 import random
 import os
+from moneyteacher.i18n import _
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
@@ -75,11 +76,11 @@ class MoneyTeacherApp(Adw.Application):
 
         # Header bar
         header = Adw.HeaderBar()
-        self.läge_knapp = Gtk.Button(label="Byt till: Växelövning")
+        self.läge_knapp = Gtk.Button(label=_("Byt till: Växelövning")
         self.läge_knapp.connect("clicked", self.byt_läge)
         header.pack_end(self.läge_knapp)
 
-        self.guide_knapp = Gtk.Button(label="Guide")
+        self.guide_knapp = Gtk.Button(label=_("Guide")
         self.guide_knapp.connect("clicked", self.visa_guide)
         header.pack_end(self.guide_knapp)
 
@@ -104,7 +105,7 @@ class MoneyTeacherApp(Adw.Application):
         # Nivå-rad
         nivå_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
         nivå_box.set_halign(Gtk.Align.CENTER)
-        nivå_label = Gtk.Label(label="Nivå:")
+        nivå_label = Gtk.Label(label=_("Nivå:")
         nivå_box.append(nivå_label)
         self.nivå_spin = Gtk.SpinButton.new_with_range(1, 10, 1)
         self.nivå_spin.set_value(self.stats["nivå"])
@@ -120,26 +121,26 @@ class MoneyTeacherApp(Adw.Application):
         pris_box.set_margin_start(16)
         pris_box.set_margin_end(16)
 
-        self.uppgift_label = Gtk.Label(label="Tryck 'Ny uppgift' för att börja!")
+        self.uppgift_label = Gtk.Label(label=_("Tryck 'Ny uppgift' för att börja!")
         self.uppgift_label.add_css_class("title-3")
         pris_box.append(self.uppgift_label)
 
-        self.pris_label = Gtk.Label(label="")
+        self.pris_label = Gtk.Label(label=_("")
         self.pris_label.add_css_class("title-1")
         pris_box.append(self.pris_label)
 
-        self.betalt_label = Gtk.Label(label="")
+        self.betalt_label = Gtk.Label(label=_("")
         self.betalt_label.add_css_class("title-4")
         pris_box.append(self.betalt_label)
 
-        self.feedback_label = Gtk.Label(label="")
+        self.feedback_label = Gtk.Label(label=_("")
         pris_box.append(self.feedback_label)
 
         self.pris_frame.set_child(pris_box)
         content.append(self.pris_frame)
 
         # Valör-knappar: Mynt
-        mynt_label = Gtk.Label(label="Mynt")
+        mynt_label = Gtk.Label(label=_("Mynt")
         mynt_label.add_css_class("heading")
         mynt_label.set_halign(Gtk.Align.START)
         content.append(mynt_label)
@@ -153,7 +154,7 @@ class MoneyTeacherApp(Adw.Application):
         content.append(mynt_box)
 
         # Valör-knappar: Sedlar
-        sedel_label = Gtk.Label(label="Sedlar")
+        sedel_label = Gtk.Label(label=_("Sedlar")
         sedel_label.add_css_class("heading")
         sedel_label.set_halign(Gtk.Align.START)
         content.append(sedel_label)
@@ -170,18 +171,18 @@ class MoneyTeacherApp(Adw.Application):
         action_box.set_halign(Gtk.Align.CENTER)
         action_box.set_margin_top(8)
 
-        self.ny_knapp = Gtk.Button(label="Ny uppgift")
+        self.ny_knapp = Gtk.Button(label=_("Ny uppgift")
         self.ny_knapp.add_css_class("suggested-action")
         self.ny_knapp.add_css_class("pill")
         self.ny_knapp.connect("clicked", self.ny_uppgift)
         action_box.append(self.ny_knapp)
 
-        self.nollställ_knapp = Gtk.Button(label="Nollställ")
+        self.nollställ_knapp = Gtk.Button(label=_("Nollställ")
         self.nollställ_knapp.add_css_class("pill")
         self.nollställ_knapp.connect("clicked", self.nollställ)
         action_box.append(self.nollställ_knapp)
 
-        self.klar_knapp = Gtk.Button(label="Klar!")
+        self.klar_knapp = Gtk.Button(label=_("Klar!")
         self.klar_knapp.add_css_class("pill")
         self.klar_knapp.connect("clicked", self.kontrollera)
         action_box.append(self.klar_knapp)
@@ -192,19 +193,19 @@ class MoneyTeacherApp(Adw.Application):
         self.växel_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
         self.växel_box.set_halign(Gtk.Align.CENTER)
         self.växel_box.set_margin_top(8)
-        växel_label2 = Gtk.Label(label="Växel tillbaka:")
+        växel_label2 = Gtk.Label(label=_("Växel tillbaka:")
         self.växel_box.append(växel_label2)
         self.växel_entry = Gtk.Entry()
         self.växel_entry.set_input_purpose(Gtk.InputPurpose.NUMBER)
         self.växel_entry.set_width_chars(8)
         self.växel_entry.connect("activate", lambda e: self.kontrollera(None))
         self.växel_box.append(self.växel_entry)
-        self.växel_box.append(Gtk.Label(label="kr"))
+        self.växel_box.append(Gtk.Label(label=_("kr"))
         self.växel_box.set_visible(False)
         content.append(self.växel_box)
 
         # Tips-sektion
-        self.tips_label = Gtk.Label(label="")
+        self.tips_label = Gtk.Label(label=_("")
         self.tips_label.set_wrap(True)
         self.tips_label.set_wrap_mode(Pango.WrapMode.WORD_CHAR)
         self.tips_label.set_margin_top(8)
