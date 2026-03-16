@@ -71,7 +71,7 @@ class MoneyTeacherApp(Adw.Application):
 
         # Huvudfönster
         self.win = Adw.ApplicationWindow(application=app)
-        self.win.set_title("MoneyTeacher - Kassaövning")
+        self.win.set_title(_("MoneyTeacher - Cashier exercise"))
         self.win.set_default_size(700, 700)
 
         # Header bar
@@ -255,7 +255,7 @@ class MoneyTeacherApp(Adw.Application):
         btn = Gtk.Button(label=label)
         btn.add_css_class("mynt-knapp" if är_mynt else "sedel-knapp")
         btn.connect("clicked", self.valör_klickad, valör)
-        btn.set_tooltip_text(f"Lägg till {valör} kr")
+        btn.set_tooltip_text(f_("Add {value} kr"))
         self.valör_knappar.append(btn)
         return btn
 
@@ -298,9 +298,9 @@ class MoneyTeacherApp(Adw.Application):
                 möjliga = [500, 1000]
             kund_betalar = random.choice(möjliga)
             self.betalt = kund_betalar
-            self.uppgift_label.set_text(f"Priset är {self.pris} kr. Kunden betalar:")
+            self.uppgift_label.set_text(f_("The price is {self.price} SEK. The customer pays:"))
             self.pris_label.set_text(f"{kund_betalar} kr")
-            self.betalt_label.set_text(f"Hur mycket växel tillbaka?")
+            self.betalt_label.set_text(f_("How much change back?"))
             self.växel_box.set_visible(True)
             self.växel_entry.set_text("")
             self.växel_entry.grab_focus()
@@ -339,13 +339,13 @@ class MoneyTeacherApp(Adw.Application):
                 self.tips_label.set_text("🎯 Nivå upp! Du är duktig!")
         elif self.betalt > self.pris:
             över = self.betalt - self.pris
-            self.feedback_label.set_text(f"För mycket! {över} kr för mycket.")
+            self.feedback_label.set_text(f_("Too much! {over} kr too much."))
             self.feedback_label.add_css_class("fel")
             self.stats["fel"] += 1
             self.stats["streak"] = 0
         else:
             kvar = self.pris - self.betalt
-            self.feedback_label.set_text(f"För lite! Det saknas {kvar} kr.")
+            self.feedback_label.set_text(f_("Too little! There is {some} money missing."))
             self.feedback_label.add_css_class("fel")
             self.stats["fel"] += 1
             self.stats["streak"] = 0
@@ -366,7 +366,7 @@ class MoneyTeacherApp(Adw.Application):
 
         rätt_växel = self.betalt - self.pris
         if svar == rätt_växel:
-            self.feedback_label.set_text(f"Rätt! {self.betalt} - {self.pris} = {rätt_växel} kr 🎉")
+            self.feedback_label.set_text(f_("Correct! {self.paid} - {self.price} = {right_change} kr 🎉"))
             self.feedback_label.add_css_class("rätt")
             self.stats["rätt"] += 1
             self.stats["streak"] += 1
@@ -375,7 +375,7 @@ class MoneyTeacherApp(Adw.Application):
                 self.nivå_spin.set_value(self.stats["nivå"])
         else:
             self.feedback_label.set_text(
-                f"Fel! Rätt svar: {self.betalt} - {self.pris} = {rätt_växel} kr"
+                f_("Wrong! Correct answer: {self.paid} - {self.price} = {right_change} kr")
             )
             self.feedback_label.add_css_class("fel")
             self.stats["fel"] += 1
@@ -401,10 +401,10 @@ class MoneyTeacherApp(Adw.Application):
     def byt_läge(self, button):
         if self.läge == "betala":
             self.läge = "växla"
-            self.läge_knapp.set_label("Byt till: Betalövning")
+            self.läge_knapp.set_label(_("Switch to: Pay exercise"))
         else:
             self.läge = "betala"
-            self.läge_knapp.set_label("Byt till: Växelövning")
+            self.läge_knapp.set_label(_("Switch to: Switching exercise"))
         self.pris = 0
         self.betalt = 0
         self.pris_label.set_text("")
@@ -420,7 +420,7 @@ class MoneyTeacherApp(Adw.Application):
         nivå = int(self.nivå_spin.get_value())
         if nivå <= 2:
             tips = [
-                f"Tips: Börja med de största valörerna!",
+                f_("Tip: Start with the largest denominations!"),
                 f"Tips: {self.pris} kr = ? × 10 kr + ? × 5 kr + ? × 1 kr",
             ]
         elif nivå <= 4:
@@ -440,7 +440,7 @@ class MoneyTeacherApp(Adw.Application):
         nivå = int(self.nivå_spin.get_value())
         if nivå <= 3:
             self.tips_label.set_text(
-                f"Tips: Räkna upp från priset till det kunden betalade.\n"
+                f_("Tip: Count up from the price to what the customer paid.")
                 f"{self.pris} + ? = {self.betalt}"
             )
         else:
