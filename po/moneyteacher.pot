@@ -1,19 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the MoneyTeacher package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#. Tips-sektion
-#: /tmp/MoneyTeacher/moneyteacher/main.py:128
-#: /tmp/MoneyTeacher/moneyteacher/main.py:132
-#: /tmp/MoneyTeacher/moneyteacher/main.py:136
-#: /tmp/MoneyTeacher/moneyteacher/main.py:208
+#: moneyteacher/main.py:128 moneyteacher/main.py:132 moneyteacher/main.py:136
+#: moneyteacher/main.py:208
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: MoneyTeacher 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 11:31+0100\n"
+"POT-Creation-Date: 2026-03-16 11:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,48 +19,46 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /tmp/MoneyTeacher/moneyteacher/main.py:79
+#: moneyteacher/main.py:79
 msgid "Byt till: Växelövning"
 msgstr ""
 
-#: /tmp/MoneyTeacher/moneyteacher/main.py:83
+#: moneyteacher/main.py:83
 msgid "Guide"
 msgstr ""
 
-#: /tmp/MoneyTeacher/moneyteacher/main.py:185
-msgid "Klar!"
-msgstr ""
-
-#. Valör-knappar: Mynt
-#: /tmp/MoneyTeacher/moneyteacher/main.py:143
-msgid "Mynt"
-msgstr ""
-
-#: /tmp/MoneyTeacher/moneyteacher/main.py:108
+#: moneyteacher/main.py:108
 msgid "Nivå:"
 msgstr ""
 
-#: /tmp/MoneyTeacher/moneyteacher/main.py:180
-msgid "Nollställ"
-msgstr ""
-
-#: /tmp/MoneyTeacher/moneyteacher/main.py:174
-msgid "Ny uppgift"
-msgstr ""
-
-#. Valör-knappar: Sedlar
-#: /tmp/MoneyTeacher/moneyteacher/main.py:157
-msgid "Sedlar"
-msgstr ""
-
-#: /tmp/MoneyTeacher/moneyteacher/main.py:124
+#: moneyteacher/main.py:124
 msgid "Tryck 'Ny uppgift' för att börja!"
 msgstr ""
 
-#: /tmp/MoneyTeacher/moneyteacher/main.py:196
+#: moneyteacher/main.py:143
+msgid "Mynt"
+msgstr ""
+
+#: moneyteacher/main.py:157
+msgid "Sedlar"
+msgstr ""
+
+#: moneyteacher/main.py:174
+msgid "New uppgift"
+msgstr ""
+
+#: moneyteacher/main.py:180
+msgid "Nollställ"
+msgstr ""
+
+#: moneyteacher/main.py:185
+msgid "Complete!"
+msgstr ""
+
+#: moneyteacher/main.py:196
 msgid "Växel tillbaka:"
 msgstr ""
 
-#: /tmp/MoneyTeacher/moneyteacher/main.py:203
+#: moneyteacher/main.py:203
 msgid "kr"
 msgstr ""

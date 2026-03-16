@@ -1,0 +1,48 @@
+# Swedish translation
+# Copyright (C) 2024
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+msgstr ""
+
+msgid "Byt till: Växelövning"
+msgstr "Byt till: Växelövning"
+
+msgid "Guide"
+msgstr "Guide"
+
+msgid "Klar!"
+msgstr "Complete!"
+
+msgid "Mynt"
+msgstr "Mynt"
+
+msgid "Nivå:"
+msgstr "Nivå:"
+
+msgid "Nollställ"
+msgstr "Nollställ"
+
+msgid "Ny uppgift"
+msgstr "New uppgift"
+
+msgid "Sedlar"
+msgstr "Sedlar"
+
+msgid "Tryck 'Ny uppgift' för att börja!"
+msgstr "Tryck 'Ny uppgift' för att börja!"
+
+msgid "Växel tillbaka:"
+msgstr "Växel tillbaka:"
+
+msgid "kr"
+msgstr "kr"
+

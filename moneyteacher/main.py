@@ -121,7 +121,7 @@ class MoneyTeacherApp(Adw.Application):
         pris_box.set_margin_start(16)
         pris_box.set_margin_end(16)
 
-        self.uppgift_label = Gtk.Label(label=_("Tryck 'Ny uppgift' för att börja!")
+        self.uppgift_label = Gtk.Label(label=_("Tryck \'Ny uppgift\' för att börja!")
         self.uppgift_label.add_css_class("title-3")
         pris_box.append(self.uppgift_label)
 
@@ -171,7 +171,7 @@ class MoneyTeacherApp(Adw.Application):
         action_box.set_halign(Gtk.Align.CENTER)
         action_box.set_margin_top(8)
 
-        self.ny_knapp = Gtk.Button(label=_("Ny uppgift")
+        self.ny_knapp = Gtk.Button(label=_("New uppgift")
         self.ny_knapp.add_css_class("suggested-action")
         self.ny_knapp.add_css_class("pill")
         self.ny_knapp.connect("clicked", self.ny_uppgift)
@@ -182,7 +182,7 @@ class MoneyTeacherApp(Adw.Application):
         self.nollställ_knapp.connect("clicked", self.nollställ)
         action_box.append(self.nollställ_knapp)
 
-        self.klar_knapp = Gtk.Button(label=_("Klar!")
+        self.klar_knapp = Gtk.Button(label=_("Complete!")
         self.klar_knapp.add_css_class("pill")
         self.klar_knapp.connect("clicked", self.kontrollera)
         action_box.append(self.klar_knapp)
