@@ -171,7 +171,7 @@ class MoneyTeacherApp(Adw.Application):
         action_box.set_halign(Gtk.Align.CENTER)
         action_box.set_margin_top(8)
 
-        self.ny_knapp = Gtk.Button(label=_("New uppgift")
+        self.ny_knapp = Gtk.Button(label=_("New task")
         self.ny_knapp.add_css_class("suggested-action")
         self.ny_knapp.add_css_class("pill")
         self.ny_knapp.connect("clicked", self.ny_uppgift)
